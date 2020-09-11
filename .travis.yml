@@ -5,5 +5,8 @@ node_js:
 
 cache: npm
 
+before_install:
+  - cd server
+
 script:
   - npm run test
