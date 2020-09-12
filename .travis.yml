@@ -1,3 +1,4 @@
+language: generic
 services:
   - docker
 
@@ -9,4 +10,4 @@ cache: npm
 before_script: cd client
 
 script:
-  - docker run client npm run test
+  - docker run -e CI=true client npm run test
