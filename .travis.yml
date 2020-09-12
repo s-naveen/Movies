@@ -14,7 +14,7 @@ script:
 
 deploy:
   provider: elasticbeanstalk
-  region: 'us-east-1'
+  region: 'us-east-2'
   app: 'Movies'
   env: 'Movies-env'
   bucket_name: 'elasticbeanstalk-us-east-2-954313048802'
