@@ -16,7 +16,6 @@
       "build": "node node_modules/react-scripts/scripts/build.js",
       "test": "node node_modules/react-scripts/scripts/test.js",
       "eject": "node node_modules/react-scripts/scripts/eject.js"
-    }
   },
   "eslintConfig": {
     "extends": "react-app"
