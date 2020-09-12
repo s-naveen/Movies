@@ -9,4 +9,4 @@ cache: npm
 before_script: cd client
 
 script:
-  - npm run test
+  - docker run client npm run test
