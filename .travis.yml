@@ -11,3 +11,16 @@ before_script: cd client
 
 script:
   - docker run -e CI=true client npm run test
+
+deploy:
+  provider: elasticbeanstalk
+  region: 'us-east-1'
+  app: 'Movies'
+  env: 'Movies-env'
+  bucket_name: 'elasticbeanstalk-us-east-2-954313048802'
+  bucket_path: 'docker'
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
+  
