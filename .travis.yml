@@ -28,7 +28,7 @@ deploy:
   provider: elasticbeanstalk
   region: 'us-east-2'
   app: 'Movies'
-  env: 'Movies-env'
+  env: 'Movies-env-1'
   bucket: 'elasticbeanstalk-us-east-2-954313048802'
   bucket_path: 'docker'
   on:
