@@ -13,7 +13,7 @@ function App() {
     setValues(values.data);
   }
 
-  let test = fetchValues();
+  fetchValues();
 
   return (
     <div className="App">
