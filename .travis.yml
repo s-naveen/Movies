@@ -17,7 +17,7 @@ after_success:
   - docker build -t server ./server
   - docker build -t nginx ./nginx
 
-  - docker login -u "$DOCKER_ID" --password-stdin "DOCKER_PASSWORD"
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
   - docker push client
   - docker push server
