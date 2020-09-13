@@ -12,12 +12,23 @@ before_script: cd client
 script:
   - docker run -e CI=true client npm run test
 
+after_success:
+  - docker build -t client ./client
+  - docker build -t server ./server
+  - docker build -t nginx ./nginx
+
+  - docker login -u "$DOCKER_ID" --password-stdin "DOCKER_PASSWORD"
+
+  - docker push client
+  - docker push server
+  - docker push nginx
+
 deploy:
   provider: elasticbeanstalk
   region: 'us-east-2'
   app: 'Movies'
   env: 'Movies-env'
-  bucket_name: 'elasticbeanstalk-us-east-2-954313048802'
+  bucket: 'elasticbeanstalk-us-east-2-954313048802'
   bucket_path: 'docker'
   on:
     branch: master
