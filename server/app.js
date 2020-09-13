@@ -15,5 +15,5 @@ app.get("/api/test", (req,res) => {
 })
 
 app.get("/test", (req,res) => {
-    res.send("Hola2");
+    res.send("Hola3");
 })
