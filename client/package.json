@@ -9,13 +9,14 @@
     "axios": "^0.20.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.3"
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^3.4.3"
   },
-    "scripts": {
-      "start": "node node_modules/react-scripts/scripts/start.js",
-      "build": "node node_modules/react-scripts/scripts/build.js",
-      "test": "node node_modules/react-scripts/scripts/test.js",
-      "eject": "node node_modules/react-scripts/scripts/eject.js"
+  "scripts": {
+    "start": "node node_modules/react-scripts/scripts/start.js",
+    "build": "node node_modules/react-scripts/scripts/build.js",
+    "test": "node node_modules/react-scripts/scripts/test.js",
+    "eject": "node node_modules/react-scripts/scripts/eject.js"
   },
   "eslintConfig": {
     "extends": "react-app"

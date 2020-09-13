@@ -9,3 +9,11 @@ app.listen(8080, (req,err) => {
 app.get("/", (req,res) => {
     res.send("Hello, World!!");
 })
+
+app.get("/api/test", (req,res) => {
+    res.send("Hola");
+})
+
+app.get("/test", (req,res) => {
+    res.send("Hola2");
+})
