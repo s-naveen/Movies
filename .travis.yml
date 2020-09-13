@@ -13,9 +13,9 @@ script:
   - docker run -e CI=true client npm run test
 
 after_success:
-  - docker build -t naveensn/client ./client
-  - docker build -t naveensn/server ./server
-  - docker build -t naveensn/nginx ./nginx
+  - docker build -t naveensn/client client/
+  - docker build -t naveensn/server server/
+  - docker build -t naveensn/nginx nginx/
 
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
